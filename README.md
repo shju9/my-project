@@ -60,6 +60,12 @@ npm run build
 
 배포용 파일은 `dist` 폴더에 생성됩니다.
 
+## GitHub Pages에 배포하기
+
+`main` 브랜치에 변경 사항을 푸시하면 GitHub Actions가 코드 검사와 빌드를 실행하고 GitHub Pages에 자동 배포합니다. GitHub 저장소의 **Settings → Pages**에서 배포 소스가 **GitHub Actions**로 설정되어 있는지 확인하세요. 배포가 완료되면 다음 주소에서 사이트를 볼 수 있습니다.
+
+https://shju9.github.io/my-project/
+
 ## 앞으로 개선하고 싶은 점
 
 **현재 구현된 것:** 홈, 자기소개 안내 화면, 실습용 포트폴리오 목록과 상세 화면, 반응형 스타일과 화면 이동 기능이 있습니다.
