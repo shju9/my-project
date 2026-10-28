@@ -70,7 +70,7 @@ function App() {
       <header className="site-header">
         <div className="header-inner">
           <a className="wordmark" href="#home" aria-label="나의 포트폴리오 홈">
-            <span className="brand-symbol" aria-hidden="true">✳</span> my portfolio<span className="brand-dot">.</span>
+            <span className="brand-symbol" aria-hidden="true">✳</span> 나의 포트폴리오<span className="brand-dot">.</span>
           </a>
           <nav aria-label="주요 메뉴">
             <a href="#/about" aria-current={isAboutPage ? 'page' : undefined}>자기소개</a>
@@ -83,7 +83,7 @@ function App() {
         <section className="hero page-width" id="home" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> A LITTLE ABOUT ME, A LOT TO EXPLORE</p>
-            <h1 id="hero-title">작은 호기심이,<br />나만의 <span className="underlined">결과물로.</span></h1>
+            <h1 id="hero-title">나를 알아가는 이야기를,<br /><span className="underlined">여기에 담아요.</span></h1>
             <p className="hero-description">배우고, 시도하고, 만들어 가는 중입니다.<br />나의 관심사와 도전이 쌓이는 이곳에 오신 걸 환영해요.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a>
@@ -109,7 +109,7 @@ function App() {
         </section>
         <div className="section-divider page-width"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></div>
         <section className="about-section page-width" id="about" aria-labelledby="about-title">
-          <div className="section-heading"><p className="eyebrow">01 / ABOUT ME</p><h2 id="about-title">안녕하세요,<br />이런 사람입니다<span>.</span></h2></div>
+          <div className="section-heading"><p className="eyebrow">01 / ABOUT ME</p><h2 id="about-title">안녕하세요,<br />반가워요<span>.</span></h2></div>
           <div className="about-content">
             <span className="example-label">자기소개를 채워 보세요</span>
             <h3>나를 가장 잘 설명하는<br />한 문장은 무엇인가요?</h3>
@@ -133,19 +133,33 @@ function App() {
             <p className="list-description">좋아하는 것과 배우는 것, 그리고 앞으로의 나에 대한 이야기.</p>
           </div>
           <div className="about-profile">
-            <div className="about-profile-art" aria-hidden="true"><span>✳</span><p>STILL LEARNING,<br />ALWAYS GROWING.</p><div>나만의 속도로,<br />나만의 방향으로.</div></div>
-            <div className="about-content">
-              <span className="example-label">나의 이야기로 채워 보세요</span>
-              <h2>안녕하세요,<br />이런 사람입니다<span>.</span></h2>
-              <p>나를 가장 잘 설명하는 한 문장으로 시작해 보세요. 좋아하는 것, 요즘 배우는 것, 앞으로 해 보고 싶은 일을 자신만의 이야기로 소개해 주세요.</p>
-              <dl className="about-details">
-                <div><dt>관심 있는 것</dt><dd>시간 가는 줄 모르고 빠져드는 주제나 취미를 적어 주세요.</dd></div>
-                <div><dt>요즘 배우는 것</dt><dd>새롭게 배우고 있거나 도전하고 있는 것을 소개해 주세요.</dd></div>
-                <div><dt>앞으로의 목표</dt><dd>만들어 보고 싶은 것, 이루고 싶은 작은 목표를 적어 주세요.</dd></div>
-              </dl>
-              <a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a>
+            <div className="about-profile-intro">
+              <span className="example-label">별명은 나중에 정해도 괜찮아요</span>
+              <h2>안녕하세요,<br /><span className="profile-nickname">[별명]</span>입니다<span>.</span></h2>
+              <p>제가 좋아하는 것과 앞으로 해 보고 싶은 이야기를 소개합니다.</p>
             </div>
+            <section className="profile-section" aria-labelledby="profile-interests">
+              <h2 id="profile-interests">관심사와 취미</h2>
+              <p className="profile-prompt">관심 있는 것과 즐겨 하는 취미를 적어 주세요.</p>
+              <p className="profile-examples">예: 그림, 운동, 음악, 독서, 게임</p>
+            </section>
+            <section className="profile-section" aria-labelledby="profile-strengths">
+              <h2 id="profile-strengths">잘하는 것과 배우고 싶은 것</h2>
+              <p className="profile-prompt">스스로 잘한다고 느끼는 점과 새롭게 배우고 싶은 것을 적어 주세요.</p>
+              <p className="profile-examples">예: 꾸준히 하기, 잘 들어주기, 악기, 코딩</p>
+            </section>
+            <section className="profile-section profile-section--wide" aria-labelledby="profile-activities">
+              <h2 id="profile-activities">해 본 활동이나 작품</h2>
+              <p className="profile-prompt">소개하고 싶은 활동, 직접 만든 작품이나 결과물을 적어 주세요.</p>
+              <p className="profile-examples">예: 동아리 활동, 수업 프로젝트, 발표. 사진이나 작품은 준비되면 나중에 추가할 수 있어요.</p>
+            </section>
+            <section className="profile-section profile-section--wide" aria-labelledby="profile-goals">
+              <h2 id="profile-goals">앞으로의 목표</h2>
+              <p className="profile-prompt">앞으로 이루고 싶거나 도전해 보고 싶은 일을 적어 주세요.</p>
+              <p className="profile-examples">예: 새로운 것을 꾸준히 배우기, 작품 하나 완성하기</p>
+            </section>
           </div>
+          <div className="detail-bottom"><p>직접 만든 작업도 함께 소개해 보세요.</p><a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a></div>
         </section>}
         {isPortfolioPage && <section className="portfolio-section portfolio-page" aria-labelledby="portfolio-title">
           <div className="page-width">
@@ -192,7 +206,7 @@ function App() {
           </> : <div className="project-not-found"><h1 id="project-title" tabIndex={-1}>프로젝트를 찾을 수 없어요.</h1><p>주소를 확인하거나 포트폴리오 목록에서 작업을 선택해 주세요.</p><a className="button button-primary" href="#/portfolio">포트폴리오 목록 보기 <span aria-hidden="true">→</span></a></div>}
         </section>}
       </main>
-      <footer className="site-footer page-width"><a className="wordmark" href="#home">my portfolio<span className="brand-dot">.</span></a><p>나의 이야기는 계속됩니다.</p><button className="back-top" type="button" onClick={() => { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); document.getElementById('main')?.focus({ preventScroll: true }) }}>맨 위로 <span aria-hidden="true">↑</span></button></footer>
+      <footer className="site-footer page-width"><a className="wordmark" href="#home">나의 포트폴리오<span className="brand-dot">.</span></a><p>나의 이야기는 계속됩니다.</p><button className="back-top" type="button" onClick={() => { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); document.getElementById('main')?.focus({ preventScroll: true }) }}>맨 위로 <span aria-hidden="true">↑</span></button></footer>
     </>
   )
 }
